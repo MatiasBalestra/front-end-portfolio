@@ -1,0 +1,64 @@
+<div class="joball">
+    <section>
+        <div class="card container bg-dark">
+
+            <div class="card-header bg-dark">
+                <h3 class="text-center">Modificar Experiencia Laboral</h3>
+            </div>
+
+            <div class="card-body bg-dark">
+
+                <div class="row mt-5" >
+                    <div class="col-md-4 mx-auto">
+                        <form (ngSubmit)="onUpdate()" novalidate #newJob="ngForm">
+                            <div class="form-group">
+                                <label for="jobPosition">Job Name:</label>
+                                <input type="text" class="form-control" id="jobPosition" name="jobPosition" [(ngModel)]="job.jobPosition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobCompany">Job Company:</label>
+                                <input type="text" class="form-control" id="jobCompany" name="jobCompany" [(ngModel)]="job.jobCompany" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobDescription">Descripcion:</label>
+                                <input type="text" class="form-control" id="jobDescription" name="jobDescription" [(ngModel)]="job.jobDescription" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="jobType">Tipo:</label>
+                                <input type="text" class="form-control" id="jobType" name="jobType" [(ngModel)]="job.jobType" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobLocalization">Localizacion:</label>
+                                <input type="text" class="form-control" id="jobLocalization" name="jobLocalization" [(ngModel)]="job.jobLocalization" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_ini">Fecha Inicio:</label>
+                                <input type="text" class="form-control" id="fecha_ini" name="fecha_ini" [(ngModel)]="job.fecha_ini" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_fin">Fecha Fin:</label>
+                                <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="job.fecha_fin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="url_imgJob">Url Imagen:</label>
+                                <input type="text" class="form-control" id="url_imgJob" name="url_imgJob" [(ngModel)]="job.url_imgJob" required>
+                            </div>
+        
+                            <div class="btn-group mt-4 btn-block">
+                                <button class="btn btn-primary btn-block" [disabled]="!newJob.valid">
+                                Modificar</button>
+                                <button class="btn btn-primary btn-block" routerLink="/portfolio/all">
+                                 Volver</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+</div>

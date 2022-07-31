@@ -1,0 +1,37 @@
+<div class="updateskillsall bg-dark">
+
+    <div *ngIf="skills" class="bg-dark container">
+        <h3 class="text-center card bg-dark">Modificar Skills</h3>
+        <div class="container card-body bg-dark">
+            <div class="row mt-5">
+                <div class="col-md-4 mx-auto">
+                    <form (ngSubmit)="onUpdate()" novalidate #updateForm="ngForm">
+                        <div class="form-group">
+                            <label for="nameSkill">Skill Name: </label>
+                            <input type="text" class="form-control" id="nameSkill" name="nameSkill" [(ngModel)]="skill.nameSkill">
+                        </div>
+                        <div class="form-group">
+                            <label for="levelSkill">Skill Domain: </label>
+                            <input type="text" class="form-control" id="levelSkill" name="levelSkill" [(ngModel)]="skill.levelSkill">
+                        </div>
+                        <div class="form-group">
+                            <label for="logoSkill">Skill Logo: </label>
+                            <input type="text" class="form-control" id="logoSkill" name="logoSkill" [(ngModel)]="skill.logoSkill">
+                        </div>
+    
+                        <div class="d-grid gap-2 form-group">
+                            <button class="btn btn-primary  btn-block" [disabled]="!updateForm.valid">
+                            Modificar
+                        </button>
+                            <button class="btn btn-primary  btn-block" routerLink="**">
+                             Volver
+                        </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

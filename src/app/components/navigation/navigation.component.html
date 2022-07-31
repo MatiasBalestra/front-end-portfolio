@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark roww" role="navigation">
+    <div class="container col">
+        <div class="col-sm-2 argprog">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navArgPrograma" aria-controls="navArgPrograma" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+            <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="../../../assets/APlogo1.png" class="img-fluid"></a>
+        </div>
+        <div class="col-md-8 text-center texlogin" *ngIf="isLogged">
+            <span style="color:#0D6EFD">
+                Bienvenido: {{this.nombreUsuario}}
+            </span>   
+        </div>
+
+        
+
+
+
+
+        <div class="col-sm-2">
+            <div class="collapse navbar-collapse" id="navArgPrograma">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-2">
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/matias-balestra/" target="_blank" class="nav-link">
+                            <i class="fab fa-linkedin fa-2x margin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/MatiasBalestra" target="_blank" class="nav-link">
+                            <i class="fab fa-github fa-2x margin fa-2x  margin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLinkActive="active" title="Login" class="nav-link" routerLink="auth/login" *ngIf="!isLogged">
+                            <button  type="submit" class="btn btn-primary logineta" >Ingresar</button>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
+                        <a class="nav-link" style="cursor: pointer;" title="Logout">
+                            <button  type="submit" class="btn btn-primary btn-block">Salir</button>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+
+        
+    </div>
+    </div>
+</nav>

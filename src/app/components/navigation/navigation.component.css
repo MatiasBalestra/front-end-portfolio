@@ -1,0 +1,35 @@
+.nav-item :hover {
+    color:#0D6EFD;
+}
+
+nav {
+    
+        box-shadow: 0 2px 5px 0 rgba(241, 235, 235, 0.25), 0 3px 10px 0 rgba(0, 0, 0, 0.2)!important;
+    
+  
+}
+
+.navbar:hover {
+   
+        box-shadow: 0 2px 5px 0 rgba(121, 214, 80, 0.25), 0 3px 10px 0 rgba(114, 253, 54, 0.2)!important;
+    
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+
+@media screen and (max-width:1000px) {
+
+    .argprog {
+        width: 0%;
+        height: 0%;
+    }
+
+    .texlogin {
+        font-size: 0%;
+
+    }
+
+}

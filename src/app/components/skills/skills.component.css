@@ -1,0 +1,47 @@
+    h3 {
+        color:#0D6EFD
+    }
+
+    .container {
+        box-shadow: 0 2px 5px 0 rgba(241, 235, 235, 0.25), 0 3px 10px 0 rgba(0, 0, 0, 0.2)!important;
+    
+    }
+
+    .container:hover {
+        box-shadow: 0 2px 5px 0 rgba(121, 214, 80, 0.25), 0 3px 10px 0 rgba(114, 253, 54, 0.2)!important;
+    }
+    
+
+    .skillsall{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 8rem;
+    
+    }
+    
+
+    .progress-wrapper {
+        position: relative;
+        margin: 20px auto;
+        font-size: 20px;
+    }
+    
+    .current {
+        position: relative;
+        color: #bbb;
+        font-weight: 100;
+        line-height: 1;
+    }
+    
+
+    
+   @media (max-width: 360px) {
+
+    .pep {
+        font-size: 10px;
+    }
+        
+    }
+    
+   

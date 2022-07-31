@@ -1,0 +1,36 @@
+<div class="newskillall bg-dark">
+
+    <div class="card container bg-dark text-center">
+        <h3 class="text-center">Añadir Skill
+        </h3>
+    </div>
+
+
+    <div class="container card-body bg-dark">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nameSkill">Skill</label>
+                        <input type="text" class="form-control" id="nameSkill" name="nameSkill" [(ngModel)]="nameSkill" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="levelSkill">Domain</label>
+                        <input type="number" class="form-control" id="levelSkill" name="levelSkill" [(ngModel)]="levelSkill" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logoSkill">Logo</label>
+                        <input type="logoSkill" class="form-control" id="logoSkill" name="logoSkill" [(ngModel)]="logoSkill" required>
+                    </div>
+    
+                    <div class="mt-4 text center">
+                        <button class="btn btn-primary  btn-block" [disabled]="!f.valid">
+                        Crear</button>
+                        <button class="btn btn-primary  btn-block" routerLink="/portfolio/all">
+                         Volver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

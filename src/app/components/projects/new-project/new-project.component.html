@@ -1,0 +1,44 @@
+<div class="newprojectall">
+
+    <div class="card container bg-dark text-center">
+        <h3 class="text-center">Añadir Nuevo Proyecto
+        </h3>
+    </div>
+
+    <div class="container card-body bg-dark">
+        <div class="row mt-5 bg-dark">
+            <div class="col-md-4 mx-auto bg-dark">
+                <form (ngSubmit)="onCreate()" novalidate #newProject="ngForm">
+                    <div class="form-group">
+                        <label for="projectName">Nombre Proyecto</label>
+                        <input type="text" class="form-control" id="projectName" name="projectName" [(ngModel)]="projectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription">Descripcion</label>
+                        <input type="text" class="form-control" id="projectDescription" name="projectDescription" [(ngModel)]="projectDescription" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectUrlImg">Imagen del Proyecto</label>
+                        <input type="text" class="form-control" id="projectUrlImg" name="projectUrlImg" [(ngModel)]="projectUrlImg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkRepositorio">Link Repositorio</label>
+                        <input type="text" class="form-control" id="linkRepositorio" name="linkRepositorio" [(ngModel)]="linkRepositorio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkWeb">Link Web</label>
+                        <input type="text" class="form-control" id="linkWeb" name="linkWeb" [(ngModel)]="linkWeb" required>
+                    </div>
+    
+                    <div class="btn-group mt-4 btn-block">
+                        <button class="btn btn-primary  btn-block" [disabled]="!newProject.valid">
+                         Crear</button>
+                        <button class="btn btn-primary  btn-block" routerLink="/portfolio/all">
+                        Volver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

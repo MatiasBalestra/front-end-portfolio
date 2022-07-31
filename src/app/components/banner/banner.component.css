@@ -1,0 +1,44 @@
+.banner{
+    width: 80%;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 5rem;
+}
+
+.banner:hover {
+    box-shadow: 0 2px 5px 0 rgba(121, 214, 80, 0.25), 0 3px 10px 0 rgba(114, 253, 54, 0.2)!important;
+}
+
+.mask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    
+    text-shadow: 1px 1px 2px black, 0 0 1em #0d6efd, 0 0 0.2em #0d6efd;
+    color: white;
+    font: 1.5em 'Poppins';
+}
+
+h2 {
+    text-shadow: 1px 1px 2px black, 0 0 1em #0d6efd, 0 0 0.2em #0d6efd;
+    color: white;
+    font: 1.5em 'Poppins';
+}
+
+.avatar img{
+    width: auto;
+    height: 100%;
+    
+}
+
+.container {
+    max-width: 1140px; }
+  
+  .site-title {
+    font-size: 1.25rem;
+    line-height: 2.5rem; }

@@ -1,0 +1,57 @@
+
+<div class="updateall">
+    
+    <div *ngIf="person">
+    
+        <div class="card container text-center bg-dark">
+    
+            <div class="card-header bg-dark">
+                <h3 class="text-center">Modificar Información Personal</h3>
+            </div>
+    
+            <div class="card-body bg-dark">
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <form (ngSubmit)="onUpdate()" novalidate #updateForm="ngForm">
+                            <div class="form-group">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="person.name">
+                            </div>
+                            <div class="form-group">
+                                <label for="surname">Lastname: </label>
+                                <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="person.surname">
+                            </div>
+                            <div class="form-group">
+                                <label for="about_me">About Me: </label>
+                                <textarea type="text" rows="10" class="form-control" id="about_me" name="about_me" [(ngModel)]="person.about_me"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="profession">Title: </label>
+                                <input type="text" class="form-control" id="profession" name="profession" [(ngModel)]="person.profession">
+                            </div>
+                            <div class="form-group">
+                                <label for="localization">Location: </label>
+                                <input type="text" class="form-control" id="localization" name="localization" [(ngModel)]="person.localization">
+                            </div>
+                            <div class="form-group">
+                                <label for="url_photo">Profile picture: </label>
+                                <input type="text" class="form-control" id="url_photo" name="url_photo" [(ngModel)]="person.url_photo">
+                            </div>
+        
+                            <div class="mt-2 d-grid gap-2 form-group">
+                                <button class="btn btn-primary btn-block" [disabled]="!updateForm.valid">
+                                Actualizar
+                            </button>
+                                <button class="btn btn-primary btn-block" routerLink="/potfolio/all">
+                                Volver
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+</div>
+

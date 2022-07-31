@@ -1,0 +1,56 @@
+
+<div class="jobsall">
+
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="text-left fw-bolder">Experiencia Laboral</h3>
+            </div>
+            <div class="col-sm-3" *ngIf="isAdmin">
+                <button class="btn btn-primary btn-block btn-md mt-4" routerLink="jobs/new">
+                <i class=" fa-regular fa-plus "></i> Añadir Experiencia
+                </button>
+            </div>
+        </div>
+    
+                <div class="prueba row">
+
+                    <div class="col"  *ngFor="let job of jobs" style="padding: 2rem">
+        
+        
+                        <div class="card bg-dark" >
+                            <img class="card-img-top" src="{{ job.url_imgJob }}" alt="Card image cap">
+                            <div class="card-body">
+                              <h3 class="card-title">{{ job.jobPosition }} </h3>
+                              <h5 class="card-group">{{ job.jobCompany }}</h5>
+                              <p class="card-text">{{ job.jobType}}</p>
+                              <p class="card-text">{{ job.jobDescription }}</p>
+                              <p>Desde &nbsp; {{ job.fecha_ini }}&nbsp; hasta: &nbsp;{{job.fecha_fin }}</p>
+                              <a href="https://www.linkedin.com/in/matias-balestra/" target="_blank" class="btn btn-primary">Más información</a>
+                            </div>
+                          </div>
+        
+        
+                          <div class="row">
+                              <div class="text-center " *ngIf="isAdmin " style="padding: 2rem">
+                                  <button class="btn btn-primary btn-block"  routerLink="jobs/update/{{job.id}} ">
+                                      <i class=" fa-regular fa-pen-to-square "></i> Editar</button>
+                                  <button class="btn btn-primary btn-block " (click)="delete(job.id) ">
+                                      <i class="fa-regular fa-trash-can "></i> Borrar</button>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+
+
+     
+    
+    
+    
+    
+    
+      
+    
+    </section>
+    
+</div>

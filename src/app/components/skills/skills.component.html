@@ -1,0 +1,43 @@
+
+<div class="skillsall">
+    <section class="container" style="padding: 2rem">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="text-left fw-bolder">Skills</h3>
+            </div>
+            <div class="col-sm-3" *ngIf="isAdmin">
+                <button class="btn btn-primary btn-block" routerLink="skills/new">
+                <i class="fa-regular fa-plus "></i> Añadir Skill
+                </button>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col" *ngFor="let skill of skills" style="padding: 3rem" >
+                
+                
+                <div class="card-body text-center">
+                    <div class="card-group text-center" style="justify-content: center;">
+                        <strong><h4 class="card-title pep" id="skills"> {{ skill.nameSkill }} </h4></strong>
+                    </div>
+                    <div style="justify-content: center;">
+                        <img src="{{ skill.logoSkill }}" class="card-img-top"  alt="...">
+                    </div>
+
+                    <div class="card-body">
+                        <round-progress [current]="skill.levelSkill " [max]="max " [rounded]="true " [radius]="100" [responsive]="true" [color]="'#0D6EFD'"></round-progress>
+                    </div>
+                </div>
+
+
+                <div class="text-center " *ngIf="isAdmin ">
+                    <button class="btn btn-primary btn-block" routerLink="/skills/update/{{skill.idSkills}}" >
+                        <i class=" fa-regular fa-pen-to-square "></i> Editar</button>
+                    <button class="btn btn-primary btn-block" (click)="delete(skill.idSkills) ">
+                        <i class="fa-regular fa-trash-can "></i> Borrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,65 @@
+<div class="newstudyall">
+
+    <section class="container">
+
+        <div class="card container bg-dark">
+
+
+            <div class="card container bg-dark text-center">
+                <h3 class="text-center">Añadir Estudios
+                </h3>
+            </div>
+            
+        </div>
+
+
+        <div class="card-body bg-dark">
+
+            <div class="row mt-5">
+    
+                    <div class="row mt-5">
+                        <div class="col-md-8 mx-auto">
+                            <form (ngSubmit)="onCreate()" novalidate #newStudy="ngForm">
+                                <div class="form-group">
+                                    <label for="titulo">Title</label>
+                                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="institutoName">Institute</label>
+                                    <input type="text" class="form-control" id="institutoName" name="institutoName" [(ngModel)]="institutoName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descriptionEducation">Descripcion</label>
+                                    <input type="text" class="form-control" id="descriptionEducation" name="descriptionEducation" [(ngModel)]="descriptionEducation" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkCertificado">Certificado</label>
+                                    <input type="text" class="form-control" id="linkCertificado" name="linkCertificado" [(ngModel)]="linkCertificado" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fecha_ini">Fecha ini:</label>
+                                    <input type="text" class="form-control" id="fecha_ini" name="fecha_ini" [(ngModel)]="fecha_ini" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fecha_fin">Fecha fin:</label>
+                                    <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="fecha_fin" required>
+                                </div>
+                                <div class="btn-group mt-4 btn-block">
+                                    <button class="btn btn-primary btn-block" [disabled]="!newStudy.valid">
+                                     Crear</button>
+                                    <button class="btn btn-primary btn-block btn-block" routerLink="/portfolio/all">
+                                     Volver</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+            </div>
+
+        </div>
+
+        
+
+    </section>
+
+</div>

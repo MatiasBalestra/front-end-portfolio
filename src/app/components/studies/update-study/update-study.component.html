@@ -1,0 +1,63 @@
+<div class="updatestudyall">
+
+    <section class="container">
+
+        <div class="card container bg-dark">
+
+            <div class="card container bg-dark text-center">
+                <h3 class="text-center">Modificar Estudios
+                </h3>
+            </div>
+
+            <div class="card-body bg-dark">
+                
+                        <div class="row mt-5" *ngIf="study">
+                            <div class="row mt-5">
+                                <div class="col-md-8 mx-auto">
+                                    <form (ngSubmit)="onUpdate()" novalidate #updateStudy="ngForm">
+                                        <div class="form-group">
+                                            <label for="titulo">Title</label>
+                                            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="study.titulo" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="institutoName">Institute</label>
+                                            <input type="text" class="form-control" id="institutoName" name="institutoName" [(ngModel)]="study.institutoName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descriptionEducation">Descripcion</label>
+                                            <input type="text" class="form-control" id="descriptionEducation" name="descriptionEducation" [(ngModel)]="study.descriptionEducation" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="linkCertificado">Certificado</label>
+                                            <input type="text" class="form-control" id="linkCertificado" name="linkCertificado" [(ngModel)]="study.linkCertificado" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fecha_ini">Fecha inicio</label>
+                                            <input type="text" class="form-control" id="fecha_ini" name="fecha_ini" [(ngModel)]="study.fecha_ini" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fecha_fin">Fecha finalizado</label>
+                                            <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="study.fecha_fin" required>
+                                        </div>
+                                        <div class="d-grid gap-2 form-group mt-4">
+                                            <button class="btn btn-primary btn-block btn-block" [disabled]="!updateStudy.valid">
+                                                     Modificar
+                                                </button>
+                                            <button class="btn btn-primary btn-block btn-block" routerLink="/portfolio/all">
+                                             Volver
+                                        </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</div>
+
